@@ -62,6 +62,8 @@ export const signup = async (req, res) => {
       _id: user._id,
     });
 
+    const idade = moment(user.data_nasc);
+
     res.status(201).json({
       token,
     });
